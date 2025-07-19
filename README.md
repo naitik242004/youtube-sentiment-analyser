@@ -24,3 +24,6 @@ A Streamlit app that analyzes the sentiment of YouTube comments using the YouTub
 git clone https://github.com/your-username/youtube-sentiment-analyzer.git
 cd youtube-sentiment-analyzer
 pip install -r requirements.txt
+
+## screenshot
+!![app screenshot] {YouTube Sentiment Analyzer - [localhost].png}
