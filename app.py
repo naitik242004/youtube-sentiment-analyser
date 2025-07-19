@@ -34,7 +34,7 @@ if st.button("Analyze"):
             st.error("Invalid YouTube URL.")
         else:
             with st.spinner("Fetching comments..."):
-                comments = get_video_comments(video_id, API_KEY, max_results=100)
+               comments, channel_name = get_video_comments(video_id, API_KEY, max_results=100)
 
             if not comments:
                 st.warning("No comments found or error fetching comments.")
@@ -54,7 +54,8 @@ if st.button("Analyze"):
                     "Comment": comments,
                     "Sentiment": sentiments
                 })
-
+                
+                st.success(f"This analysis is of Mr. {channel_name}")
                 st.subheader("Sample Comments with Sentiment")
                 st.dataframe(df.head(10), height=300)
 
